@@ -65,6 +65,7 @@
       text-decoration: none;
     }
   </style>
+  <script src="script.js" defer></script> <!-- ✅ This line added -->
 </head>
 <body>
 
@@ -83,7 +84,7 @@
 
     <h1>Log in with your WashU Key</h1>
 
-    <form onsubmit="event.preventDefault(); alert('This is a simulation — no data collected.');">
+    <form>
       <label>Username</label><br>
       <input type="text" placeholder="Enter username"><br>
 
@@ -94,7 +95,7 @@
 
       <a href="#">Forgot WashU Key Password?</a><br><br>
 
-      <button class="login-btn">Login</button>
+      <button class="login-btn" type="submit">Login</button>
     </form>
   </div>
 
