@@ -10,7 +10,7 @@
   
     // Log page visit
     const logVisit = () => {
-      const url = `https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec?` +
+      const url = `https://script.google.com/macros/s/AKfycbzBEkZ2LA1K7DJy9z2Pp1hbXBY0z6o30SCjTLe20G6rNQoSQSn_vHCDjJwezibgShvn/exec` +
                   `variant=${encodeURIComponent(variant)}` +
                   `&userAgent=${encodeURIComponent(userAgent)}` +
                   `&referrer=${encodeURIComponent(referrer)}` +
