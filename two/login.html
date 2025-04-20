@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WashU Key Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #f9f7f1;
+    }
+    header {
+      background-color: #b40123;
+      padding: 20px;
+      text-align: left;
+    }
+    header img {
+      height: 40px;
+    }
+    .login-container {
+      display: flex;
+    }
+    .left-panel {
+      flex: 2;
+      padding: 40px;
+    }
+    .alert {
+      border: 1px solid #ccc;
+      padding: 16px;
+      background-color: white;
+      margin-bottom: 30px;
+    }
+    .alert strong {
+      display: block;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .login-btn {
+      background-color: #b40123;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .side-panel {
+      flex: 1;
+      background-color: #b40123;
+      background-image: url('https://identity.wustl.edu/images/bg-icon.svg');
+      background-repeat: repeat;
+    }
+    a {
+      color: #b40123;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://identity.wustl.edu/images/logo-wustl-horizontal.svg" alt="WashU logo">
+</header>
+
+<div class="login-container">
+  <div class="left-panel">
+    <div class="alert">
+      <strong>WUSTL KEY HAS CHANGED TO WASHU KEY</strong>
+      Did you hear? WUSTL Key has a new name and a new look, WashU Key.
+      <br>
+      <a href="#">Please see the announcement on it.wustl.edu for more information.</a>
+    </div>
+
+    <h1>Log in with your WashU Key</h1>
+
+    <form onsubmit="event.preventDefault(); alert('This is a simulation — no data collected.');">
+      <label>Username</label><br>
+      <input type="text" placeholder="Enter username"><br>
+
+      <a href="#">Forgot WashU Key ID?</a><br><br>
+
+      <label>Password</label><br>
+      <input type="password" placeholder="Enter password"><br>
+
+      <a href="#">Forgot WashU Key Password?</a><br><br>
+
+      <button class="login-btn">Login</button>
+    </form>
+  </div>
+
+  <div class="side-panel"></div>
+</div>
+
+</body>
+</html>
