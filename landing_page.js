@@ -8,13 +8,15 @@
   const width = screen.width;
   const height = screen.height;
 
-  const url = `https://script.google.com/macros/s/AKfycbz.../exec?` +
+  const url = `https://script.google.com/macros/s/AKfycbzFAxV5FyEXU2-Ffb9HTuaupJ9dKeAzZi7e5biP0E7CvrnVqj9GTc1sKnVjld1cENCZ/exec?` +
               `variant=${encodeURIComponent(variant)}` +
               `&userAgent=${encodeURIComponent(userAgent)}` +
               `&referrer=${encodeURIComponent(referrer)}` +
-              `&lang=${lang}` +
+              `&lang=${encodeURIComponent(lang)}` +
               `&tz=${tz}` +
               `&width=${width}&height=${height}`;
 
-  fetch(url).then(() => console.log("Logged expanded data"));
+  fetch(url)
+    .then(() => console.log("Logged extended info"))
+    .catch(err => console.error("Logging failed:", err));
 })();
