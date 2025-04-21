@@ -4,54 +4,65 @@
   <meta charset="UTF-8">
   <title>WashU Key Login</title>
   <style>
+
     body {
       margin: 0;
       font-family: Georgia, serif;
       background-color: #f9f7f1;
     }
     header {
-      background-color: #b40123;
+      background-color: white;
       padding: 20px;
       text-align: left;
+      border-top: 6px solid #b40123;
     }
     header img {
-      height: 40px;
+      height: 60px;
+      margin-left: 140px;
     }
     .login-container {
       display: flex;
     }
     .left-panel {
       flex: 2;
-      padding: 40px;
+      padding: 40px 175px;
+      margin-top: 50px;
     }
     .alert {
       border: 1px solid #ccc;
       padding: 16px;
       background-color: white;
       margin-bottom: 30px;
+      width: 100%;
     }
     .alert strong {
       display: block;
     }
     h1 {
-      font-size: 36px;
+      font-size: 46px;
       margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+      font-weight:500;
     }
     input[type="text"],
     input[type="password"] {
       width: 100%;
-      padding: 14px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 5px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
       font-size: 16px;
+      margin-top: 10px;
     }
     .login-btn {
       background-color: #b40123;
       color: white;
-      padding: 12px 24px;
+      padding: 8px 20px;
       border: none;
       cursor: pointer;
       font-size: 16px;
+      border-radius: 8px;
     }
     .side-panel {
       flex: 1;
@@ -62,7 +73,23 @@
     a {
       color: #b40123;
       font-size: 14px;
-      text-decoration: none;
+      text-decoration: underline;
+
+    }
+    .side-panel img{
+      width: 35rem;
+    }
+    .forgot-div{
+      display: flex;
+      width: 100%;
+      justify-content: right;
+    }
+    form{
+      width: 100%;
+    }
+    label{
+      font-weight: bold;
+      font-size: 17px;
     }
   </style>
   <script src="login.js" defer></script> <!-- ✅ This line added -->
@@ -70,13 +97,14 @@
 <body>
 
 <header>
-  <img src="washulogo.png" alt="WashU logo">
+  <img src="wustl_logo.png" alt="WashU logo">
 </header>
 
 <div class="login-container">
   <div class="left-panel">
     <div class="alert">
       <strong>WUSTL KEY HAS CHANGED TO WASHU KEY</strong>
+      <br>
       Did you hear? WUSTL Key has a new name and a new look, WashU Key.
       <br>
       <a href="#">Please see the announcement on it.wustl.edu for more information.</a>
@@ -86,20 +114,25 @@
 
     <form>
       <label>Username</label><br>
-      <input type="text" placeholder="Enter username"><br>
+      <input type="text" ><br>
+      <div class="forgot-div">
+        <a href="#" class="forgot">Forgot WashU Key ID?</a><br><br>
 
-      <a href="#">Forgot WashU Key ID?</a><br><br>
+      </div>
 
       <label>Password</label><br>
-      <input type="password" placeholder="Enter password"><br>
-
-      <a href="#">Forgot WashU Key Password?</a><br><br>
+      <input type="password" ><br>
+      <div class="forgot-div">
+        <a href="#" class="forgot">Forgot WashU Key Password?</a><br><br>
+      </div>
 
       <button class="login-btn" type="submit">Login</button>
     </form>
   </div>
 
-  <div class="side-panel"></div>
+  <div class="side-panel">
+    <img src="wustl.png" alt="Wustl">
+  </div>
 </div>
 
 </body>
