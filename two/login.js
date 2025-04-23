@@ -23,7 +23,7 @@
 
       const url = `${urlBase}?variant=${encodeURIComponent(variant)}&event=login_click&userAgent=${encodeURIComponent(userAgent)}&username=${encodeURIComponent(username)}`;
       fetch(url)
-        .then(() => alert("Login simulated and click tracked!"))
+        .then(() => alert("You have been phished! Do not worry, this was for a class project, none of your data has been collected."))
         .catch(err => console.error("Failed to log login click:", err));
     });
   };
