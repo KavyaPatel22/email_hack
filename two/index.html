@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>WashU Key Login</title>
   <style>
-
     body {
       margin: 0;
       font-family: Georgia, serif;
       background-color: #f9f7f1;
     }
+
     header {
       background-color: white;
       padding: 20px;
       text-align: left;
       border-top: 6px solid #b40123;
     }
+
     header img {
       height: 60px;
       margin-left: 140px;
     }
+
     .login-container {
       display: flex;
     }
+
     .left-panel {
       flex: 2;
       padding: 40px 175px;
       margin-top: 50px;
     }
+
     .alert {
       border: 1px solid #ccc;
       padding: 16px;
@@ -35,15 +40,18 @@
       margin-bottom: 30px;
       width: 100%;
     }
+
     .alert strong {
       display: block;
     }
+
     h1 {
       font-size: 46px;
       margin-bottom: 20px;
       font-family: 'Georgia', serif;
-      font-weight:500;
+      font-weight: 500;
     }
+
     input[type="text"],
     input[type="password"] {
       width: 100%;
@@ -55,6 +63,7 @@
       font-size: 16px;
       margin-top: 10px;
     }
+
     .login-btn {
       background-color: #b40123;
       color: white;
@@ -64,76 +73,92 @@
       font-size: 16px;
       border-radius: 8px;
     }
+
     .side-panel {
       flex: 1;
       background-color: #b40123;
       background-image: url('https://identity.wustl.edu/images/bg-icon.svg');
       background-repeat: repeat;
     }
+
     a {
       color: #b40123;
       font-size: 14px;
       text-decoration: underline;
 
     }
-    .side-panel img{
+
+    .side-panel img {
       width: 35rem;
     }
-    .forgot-div{
+
+    .forgot-div {
       display: flex;
       width: 100%;
       justify-content: right;
     }
-    form{
+
+    form {
       width: 100%;
     }
-    label{
+
+    label {
       font-weight: bold;
       font-size: 17px;
+    }
+
+    @media (max-width: 1260px) {
+      .side-panel img, .side-panel{
+        display: none;
+      }
+      
+
     }
   </style>
   <script src="login.js" defer></script> <!-- ✅ This line added -->
 </head>
+
 <body>
 
-<header>
-  <img src="wustl_logo.png" alt="WashU logo">
-</header>
+  <header>
+    <img src="wustl_logo.png" alt="WashU logo">
+  </header>
 
-<div class="login-container">
-  <div class="left-panel">
-    <div class="alert">
-      <strong>WUSTL KEY HAS CHANGED TO WASHU KEY</strong>
-      <br>
-      Did you hear? WUSTL Key has a new name and a new look, WashU Key.
-      <br>
-      <a href="#">Please see the announcement on it.wustl.edu for more information.</a>
+  <div class="login-container">
+    <div class="left-panel">
+      <div class="alert">
+        <strong>WUSTL KEY HAS CHANGED TO WASHU KEY</strong>
+        <br>
+        Did you hear? WUSTL Key has a new name and a new look, WashU Key.
+        <br>
+        <a href="#">Please see the announcement on it.wustl.edu for more information.</a>
+      </div>
+
+      <h1>Log in with your WashU Key</h1>
+
+      <form>
+        <label>Username</label><br>
+        <input type="text" name="username"><br>
+        <div class="forgot-div">
+          <a href="#" class="forgot">Forgot WashU Key ID?</a><br><br>
+
+        </div>
+
+        <label>Password</label><br>
+        <input type="password"><br>
+        <div class="forgot-div">
+          <a href="#" class="forgot">Forgot WashU Key Password?</a><br><br>
+        </div>
+
+        <button class="login-btn" type="submit">Login</button>
+      </form>
     </div>
 
-    <h1>Log in with your WashU Key</h1>
-
-    <form>
-      <label>Username</label><br>
-      <input type="text" name="username"><br>
-      <div class="forgot-div">
-        <a href="#" class="forgot">Forgot WashU Key ID?</a><br><br>
-
-      </div>
-
-      <label>Password</label><br>
-      <input type="password" ><br>
-      <div class="forgot-div">
-        <a href="#" class="forgot">Forgot WashU Key Password?</a><br><br>
-      </div>
-
-      <button class="login-btn" type="submit">Login</button>
-    </form>
+    <div class="side-panel">
+      <img src="wustl.png" alt="Wustl">
+    </div>
   </div>
-
-  <div class="side-panel">
-    <img src="wustl.png" alt="Wustl">
-  </div>
-</div>
 
 </body>
+
 </html>
